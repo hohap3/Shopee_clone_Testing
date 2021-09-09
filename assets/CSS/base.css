@@ -1,0 +1,276 @@
+/* Global Variable */
+
+:root {
+  --white-color:#fff;
+  --black-color:#000;
+  --text-color:#333;
+  --header-height:120px;
+  --header-navbar-height:40px;
+  --header-with-search-height:calc(var(--header-height) - var(--header-navbar-height)); 
+  --border-color:#dbdbdb;
+  --primary-color:#ee4b2b;
+  --red-btn-color:#f44336;
+  --color-banner-sale-off-event:#ffecdb;
+  --color-red:#d0011b;
+  --top-banner-product-color:#ff7d3b;
+}
+
+.app {
+  overflow: hidden;
+}
+
+/* Setting all */
+
+* {
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+/* HTML setting */
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Modal */
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top:0;
+  right:0;
+  left:0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  animation: fade linear 0.3s;
+  will-change: opacity;
+  display: none;
+  z-index: 10;
+}
+
+.modal--register.open {
+  display: flex;
+}
+
+.modal--login.open {
+  display: flex;
+}
+
+.modal__container {
+  background-color: var(--white-color);
+  width: 600px;
+  border-radius: 2px;
+  z-index: 10;
+  position: absolute;
+  animation: slideDown linear 0.3s;
+}
+
+.modal__header {
+  height:68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  z-index: 10;
+}
+
+.modal__heading {
+  margin: 0;
+  font-size: 2.2rem;
+  line-height: 1.6rem;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  color:var(--white-color);
+  font-weight: 500;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top:0;
+  right:0;
+  background:none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color:var(--white-color);
+  font-size: 1.4rem;
+  padding:6px 12px;
+}
+
+.modal__close-btn:hover {
+  background-color: var(--white-color);
+  color:var(--black-color);
+}
+
+.modal__form {
+  padding:8px 12px;
+  flex: 1;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group-gender {
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  font-size: 1.4rem;
+  margin:6px 0;
+  color:var(--text-color);
+}
+
+.form__input {
+  font-size: 1.4rem;
+  height:32px;
+  padding:0 8px;
+  border:thin solid var(--border-color);
+  color:var(--text-color);
+}
+
+.form__gender-text {
+  font-size: 1.4rem;
+  margin:0 6px;
+}
+
+.form__submit-btn {
+  font-size: 1.8rem;
+  width: 100%;
+  margin:18px 0 18px 0;
+  cursor: pointer;
+  border:none;
+  border-radius: 2px;
+  background-color: var(--primary-color);
+  padding:14px 0;
+  text-transform: uppercase;
+  color:var(--white-color);
+}
+
+
+.modal__footer {
+  padding:0 12px;
+  margin:16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__second-close-btn {
+  font-size: 1.6rem;
+  color:var(--white-color);
+  background-color: var(--red-btn-color);
+  border:none;
+  padding:10px 12px;
+  cursor: pointer;
+}
+
+.modal__second-close-btn:hover {
+  background-color:lightgray;
+  color:var(--black-color);
+}
+
+.modal__footer-help-text {
+  font-size: 1.4rem;
+  color:var(--text-color);
+}
+
+.modal__footer-help-text a {
+  text-decoration: underline;
+}
+
+
+
+/* Button */
+
+.btn {
+  min-width: 96px;
+  height:36px;
+  background-color: var(--white-color);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:var(--text-color);
+  border-radius: 2px;
+  border:none;
+  cursor: pointer;
+}
+
+.btn.btn--primary {
+  color:var(--white-color);
+  background-color: var(--primary-color);
+}
+
+/*  Edit scroll bar  */
+
+.header__cart-list-item::-webkit-scrollbar {
+  width: 10px;
+}
+
+.header__cart-list-item::-webkit-scrollbar-track {
+  border-radius:5px;
+  box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.header__cart-list-item::-webkit-scrollbar-thumb {
+  border-radius:5px;
+  background-color:var(--primary-color);
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform:translateY(-114px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-101%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,51 @@
+{
+  "Product_in_cart": [
+    {
+      "id": 1,
+      "name": "Lên gác rút thang",
+      "price": "35.000đ",
+      "amount": 1,
+      "description": "Sách tâm lý về cuộc sống",
+      "img": "./assets/img/Len-gac-rut-thang.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Tiểu thuyết Ông già và biển cả",
+      "price": "45.000đ",
+      "amount": 1,
+      "description": "Tiểu thuyết về phiêu lưu",
+      "img": "./assets/img/ong_gia_va_bien_ca.jpg"
+    },
+
+    {
+      "id": 3,
+      "name": "Tiểu thuyết AI và Ky ở xứ sở những con số tàng hình",
+      "price": "65.000đ",
+      "amount": 2,
+      "description": "Tiểu thuyết về phiêu lưu",
+      "img": "./assets/img/novel-3.jpg"
+    },
+
+    {
+      "id": 4,
+      "name": "Balo Divoom Pixoo Backpack",
+      "price": "165.000đ",
+      "amount": 1,
+      "description": "Balo dành cho trẻ em",
+      "img": "./assets/img/balo-divoom-pixoo.jpg"
+    },
+
+    {
+      "id": 5,
+      "name": "BÁNH KHOAI MÔN & KEM CHEESE TRỨNG CHẢY ĐÀI LOAN",
+      "price": "65.000đ",
+      "amount": 1,
+      "description": "Đồ ăn vặt",
+      "img": "./assets/img/banh-khoai-mon.jpg"
+    }
+
+
+
+    
+  ]
+}

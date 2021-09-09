@@ -1374,6 +1374,7 @@
   border-radius: 2px;
   transform: translateY(0);
   transition: transform linear 0.1s;
+  margin:6px 0;
 }
 
 .product-link-image-sales {

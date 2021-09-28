@@ -93,13 +93,15 @@ function sliders() {
     showImg(slideIndex += n);
   }
 
+  const nextBtn = document.querySelector('.next-btn');
+
+  const prevBtn = document.querySelector('.prev-btn');
+
   function showImg(n) {
 
     const sliders = document.querySelectorAll('.slider-picture');
 
-    const nextBtn = document.querySelector('.next-btn');
-
-    const prevBtn = document.querySelector('.prev-btn');
+    
 
     // Nếu tham số n lớn hơn số lượng hình ảnh thì trả vế 1
     if(n > sliders.length)
@@ -115,14 +117,19 @@ function sliders() {
 
     // Hiển thị hình ảnh
     sliders[slideIndex - 1].style.display = 'block';
-    
-    nextBtn.onclick = () => {
-      plusSide(1);
-    }
+  }
 
-    prevBtn.onclick = () => {
-      plusSide(-1);
-    }
+  // Auto slider
+  setInterval(() => {
+    nextBtn.click();
+  }, 4000);
+
+  nextBtn.onclick = () => {
+    plusSide(1);
+  }
+
+  prevBtn.onclick = () => {
+    plusSide(-1);
   }
 }
 

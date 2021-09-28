@@ -122,7 +122,7 @@ function sliders() {
   // Auto slider
   setInterval(() => {
     nextBtn.click();
-  }, 3500);
+  }, 3250);
 
   nextBtn.onclick = () => {
     plusSide(1);
